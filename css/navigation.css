@@ -1,0 +1,56 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  button {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.nav__wrapper {
+  min-width: 200px;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  padding: 80px 0 0 0;
+}
+
+.nav__wrapper li {
+  display: flex;
+  padding: 10px 16px;
+
+  &:hover {
+    background-color: #eaeaea;
+    /* 무슨 차이지 ? 그냥 :hover만 사용하면 선택자 자식요소 뜻하고 &:hover는 선택자 자체를 뜻함 */
+  }
+}
+
+/* 다른 표시 방법
+.nav__wrapper li:hover {
+} */
+
+.nav__icone {
+  font-size: 1.5rem;
+}
+.nav__menu {
+  margin: 0 0 0 8px;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .nav__menu {
+    display: none;
+  }
+
+  .nav__wrapper {
+    min-width: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .nav__wrapper {
+    display: none;
+  }
+}
